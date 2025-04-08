@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 33000013787139626}
   - component: {fileID: 23000012348044720}
   - component: {fileID: 4562770415881999738}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: chainlink_LOD1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +120,7 @@ GameObject:
   - component: {fileID: 33000013037877684}
   - component: {fileID: 23000010531826636}
   - component: {fileID: 8196717060605776826}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: chainlink_LOD0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
