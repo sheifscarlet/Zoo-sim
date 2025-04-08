@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 632282538455141979}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 118562561546440855}
   m_Layer: 0
   m_Name: PlayerController
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -148,12 +148,21 @@ MonoBehaviour:
   bobAmount: 0.05
   landingBobIntensity: 0.1
   landingBobDecaySpeed: 10
+  breathingRate: 0.5
+  breathingAmount: 0.02
+  breathingRotationAmountX: 0.5
+  breathingRotationAmountY: 0.5
+  sprintBobMultiplier: 1.5
+  CinemachineBrain: {fileID: 7762823823610041846}
+  defaultFOV: 65
+  zoomedFOV: 30
+  zoomTransitionSpeed: 5
   holdPoint: {fileID: 3234316656564206314}
-  pickupRange: 3
+  pickupRange: 5
   interactableLayer:
     serializedVersion: 2
     m_Bits: 64
-  zoomSpeed: 0.5
+  zoomSpeed: 1
 --- !u!143 &118562561546440855
 CharacterController:
   m_ObjectHideFlags: 0
