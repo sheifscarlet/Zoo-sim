@@ -1,0 +1,637 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5593647248730257359
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5419037091551488817}
+  m_Layer: 0
+  m_Name: GroupedPanelsV1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5419037091551488817
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5593647248730257359}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 6546658242968134998}
+  - {fileID: 7083317533417401976}
+  - {fileID: 6281253927422310288}
+  - {fileID: 4166723517802928006}
+  - {fileID: 4889451802623036226}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1000128856395921147
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5419037091551488817}
+    m_Modifications:
+    - target: {fileID: 143615212247586847, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_text
+      value: "Deer are graceful, hoofed mammals known for their agility and distinctive
+        antlers. They are found on every continent except Australia and Antarctica,
+        inhabiting diverse environments such as forests, prairies, mountains, and
+        wetlands. Deer are herbivores and typically live in small groups, although
+        some species can be solitary.\r\n\r\nFun Facts:\r\n\r\n    Antlers: Only
+        male deer, known as bucks, grow antlers, which they shed and regrow annually.
+        Antlers are used for defense and to attract mates.\r\n    Size and Speed:
+        Deer range in size from the tiny Pud\xFA, standing at 35 cm (14 inches) tall,
+        to the large moose, reaching up to 2.1 meters (7 feet) at the shoulder. They
+        can run swiftly, reaching speeds up to 58 km/h (36 mph).\r\n    Diet: Deer
+        primarily feed on grass, leaves, twigs, fruits, and nuts. They are ruminants,
+        meaning they have a four-chambered stomach to help digest plant material.\r\n   
+        Lifespan: The average lifespan of a deer varies by species but generally
+        ranges from 10 to 20 years in the wild.\r\n    Species: There are over 100
+        species of deer worldwide, including white-tailed deer, reindeer, and elk,
+        each adapted to different habitats and climates.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3075120625753925311, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_Size.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3075120625753925311, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_Size.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3202938974220864535, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_Name
+      value: DeerPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 133.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 60.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9996391
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.026864044
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -3.079
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271057370060303828, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_text
+      value: Deer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271057370060303828, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485403740200184889, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.106
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485403740200184889, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.047
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485403740200184889, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8593656156222782320, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.141
+      objectReference: {fileID: 0}
+    - target: {fileID: 8593656156222782320, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 8593656156222782320, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.327
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188854972656182462, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.14
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188854972656182462, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.47048843
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188854972656182462, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.09397463
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188854972656182462, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.8424819
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188854972656182462, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.24501795
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188854972656182462, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -20.51
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188854972656182462, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 30.084
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188854972656182462, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 480.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188854972656182462, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -4.787
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+--- !u!4 &4166723517802928006 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+  m_PrefabInstance: {fileID: 1000128856395921147}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6232692537943101189
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5419037091551488817}
+    m_Modifications:
+    - target: {fileID: 143615212247586847, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_text
+      value: "The capybara is the largest rodent in the world, native to South America.
+        These semi-aquatic mammals are well-adapted to life in and around water,
+        inhabiting savannas, dense forests, and wetlands near bodies of water. They
+        are social creatures, often found in groups of 10-20 individuals, but sometimes
+        in larger groups of up to 100. Capybaras have a barrel-shaped body with reddish-brown
+        to yellowish-brown fur, and their facial features are positioned high on
+        their heads, allowing them to see and breathe while mostly submerged in water.\r\n\r\nFun
+        Facts:\r\n    Size: Capybaras can grow up to 1.3 meters (4.3 feet) in length
+        and weigh up to 79 kg (174 pounds). The largest capybara ever recorded weighed
+        91 kg (201 lb)\r\n    Water Adaptations: Capybaras are excellent swimmers
+        and can hold their breath underwater for up to five minutes. Their partially
+        webbed feet help them maneuver in water, and they often submerge themselves
+        to escape predators or to cool off\r\n    Diet: Capybaras primarily feed
+        on their own body weight in grasses each day. They are also known to eat
+        water plants, fruits, and tree bark. During the dry season, their small intestine
+        grows to absorb more nutrients from less nutritious food\r\n    Social Structure:
+        Capybaras live in groups consisting of a dominant male, females, and their
+        offspring. They are known to exhibit cooperative behaviors, such as group
+        grooming and communal care of young\r\n    Relatives: Capybaras are closely
+        related to guinea pigs and rock cavies, and more distantly related to chinchillas
+        and agoutis. They belong to the family Caviidae, within the subfamily Hydrochoerinae"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3202938974220864535, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_Name
+      value: CappyPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 99.62
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 77.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271057370060303828, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_text
+      value: CappyBara (Coconut Doggy)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271057370060303828, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_fontSize
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271057370060303828, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_fontSizeBase
+      value: 1.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485403740200184889, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.105
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485403740200184889, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.005
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485403740200184889, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.003
+      objectReference: {fileID: 0}
+    - target: {fileID: 8593656156222782320, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.127
+      objectReference: {fileID: 0}
+    - target: {fileID: 8593656156222782320, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.193
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+--- !u!4 &7083317533417401976 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+  m_PrefabInstance: {fileID: 6232692537943101189}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7140870871135606509
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5419037091551488817}
+    m_Modifications:
+    - target: {fileID: 143615212247586847, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_text
+      value: "The horse is a large, powerful mammal known for its strength, speed,
+        and agility. Domesticated over 6,000 years ago, horses have played a crucial
+        role in human history, serving in transportation, agriculture, and warfare.
+        They are found worldwide, adapted to various environments, from grasslands
+        to deserts. Horses are social animals, living in herds led by a dominant
+        mare.\r\n\r\nFun Facts:\r\n\r\n    Size and Speed: Horses can reach up to
+        1.8 meters (6 feet) at the shoulder and weigh over 1,000 kg (2,200 pounds).
+        They can run at speeds exceeding 88 km/h (55 mph) over short distances.\r\n   
+        Diet: Horses are herbivores, primarily feeding on grasses and other plant
+        material. They spend most of their day grazing, consuming up to 2-2.5% of
+        their body weight in food daily.\r\n    Communication: Horses communicate
+        using a range of vocalizations, body language, and facial expressions. They
+        use ear position, tail movements, and body posture to convey messages to
+        other horses.\r\n    Lifespan: The average lifespan of a horse is around
+        25-30 years, but with proper care, many horses can live into their late 30s
+        or even their 40s.\r\n    Breeds: There are over 300 distinct horse breeds
+        worldwide, each with unique characteristics and traits, from the small Falabella
+        to the powerful Clydesdale.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3202938974220864535, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_Name
+      value: HorsePanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 100.19
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 31.68
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.71272725
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.70144135
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 89.086
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271057370060303828, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_text
+      value: Horse
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271057370060303828, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485403740200184889, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.106
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485403740200184889, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.047
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485403740200184889, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8593656156222782320, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.141
+      objectReference: {fileID: 0}
+    - target: {fileID: 8593656156222782320, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.006
+      objectReference: {fileID: 0}
+    - target: {fileID: 8593656156222782320, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.327
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188854972656182462, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188854972656182462, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.33914468
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188854972656182462, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.104354024
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188854972656182462, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.89358354
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188854972656182462, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.27495396
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188854972656182462, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -16.216
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188854972656182462, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 498.43298
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+--- !u!4 &6281253927422310288 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+  m_PrefabInstance: {fileID: 7140870871135606509}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &7991745220864623659
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5419037091551488817}
+    m_Modifications:
+    - target: {fileID: 3202938974220864535, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_Name
+      value: TigerPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 90.48
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.82
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 98.75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+--- !u!4 &6546658242968134998 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+  m_PrefabInstance: {fileID: 7991745220864623659}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &8640390706496350783
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5419037091551488817}
+    m_Modifications:
+    - target: {fileID: 143615212247586847, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_text
+      value: "Monkeys are intelligent and agile primates known for their playful
+        behavior and adaptability. They are found in various habitats, including
+        tropical rainforests, savannas, and mountains across Africa, Asia, and the
+        Americas. Monkeys are social animals, living in groups called troops, which
+        can range from a few individuals to over a hundred.\r\n\r\nFun Facts:\r\n\r\n   
+        Species: There are over 260 known species of monkeys, divided into two main
+        groups: Old World monkeys (found in Africa and Asia) and New World monkeys
+        (found in the Americas).\r\n    Size and Agility: Monkeys vary greatly in
+        size, from the tiny pygmy marmoset, weighing just 100 grams (3.5 ounces),
+        to the large mandrill, which can weigh up to 35 kg (77 pounds). They are
+        excellent climbers, using their tails and limbs to navigate trees with ease.\r\n   
+        Diet: Most monkeys are omnivores, feeding on a diet of fruits, leaves, insects,
+        and small animals. Some species have specialized diets, such as the leaf-eating
+        colobus monkeys.\r\n    Communication: Monkeys use a variety of vocalizations,
+        facial expressions, and body language to communicate with each other. They
+        are known for their complex social structures and hierarchies.\r\n    Lifespan:
+        The lifespan of a monkey varies by species but generally ranges from 10 to
+        50 years in the wild, with some living even longer in captivity.\r\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 3075120625753925311, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_Size.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3075120625753925311, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_Size.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3202938974220864535, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_Name
+      value: MonkeePanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 115.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 118.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -0.66886747
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7433817
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 263.95898
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271057370060303828, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_text
+      value: 'Monkey '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4271057370060303828, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_HorizontalAlignment
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485403740200184889, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485403740200184889, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.058
+      objectReference: {fileID: 0}
+    - target: {fileID: 8485403740200184889, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.001
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188854972656182462, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 5.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 9188854972656182462, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -21.834
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+--- !u!4 &4889451802623036226 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+  m_PrefabInstance: {fileID: 8640390706496350783}
+  m_PrefabAsset: {fileID: 0}

@@ -1,5 +1,7 @@
+using NUnit.Framework.Internal.Filters;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using Unity.Cinemachine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -40,12 +42,24 @@ public class PlayerController : MonoBehaviour
     private float landingBobOffset = 0f;
     private bool landingTriggered = false;
 
+    [Header("Breathing Settings")]
+    public float breathingRate = 0.5f;
+    public float breathingAmount = 0.02f;
+
+    [Header("Breathing Rotation Settings")]
+    public float breathingRotationAmountX = 0.5f;
+    public float breathingRotationAmountY = 0.5f;
+
+    [Header("Head Bob Extra Settings")]
+    public float sprintBobMultiplier = 1.5f;
+
     [Header("Camera Base Position")]
     private Vector3 defaultCameraLocalPos;
 
-    private Vector2 moveInput;
-    private PlayerInputActions.PlayerInputActions playerInput;
-    private bool wasGrounded = true;
+    [Header("Zoom Settings")] public CinemachineBrain CinemachineBrain;
+    public float defaultFOV = 13.85814f; 
+    public float zoomedFOV = 14f;
+    public float zoomTransitionSpeed = 5f;
 
     // Object Interaction Settings - Ale
     [Header("Object Interaction")]
@@ -54,15 +68,17 @@ public class PlayerController : MonoBehaviour
     public LayerMask interactableLayer;
     private GameObject heldObject;
     private bool isHolding;
-
     private float holdDistance = 2f;
     public float zoomSpeed = 2f;
+
+    private Vector2 moveInput;
+    private PlayerInputActions.PlayerInputActions playerInput;
+    private bool wasGrounded = true;
 
     private void Awake()
     {
         controller ??= GetComponent<CharacterController>();
-
-        //Store default values for crouching and camera position.
+        
         defaultControllerHeight = controller.height;
         defaultControllerCenter = controller.center;
         if (playerCamera != null)
@@ -70,7 +86,6 @@ public class PlayerController : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
-
 
         playerInput = new PlayerInputActions.PlayerInputActions();
         playerInput.Player.Move.performed += ctx => moveInput = ctx.ReadValue<Vector2>();
@@ -90,7 +105,6 @@ public class PlayerController : MonoBehaviour
         playerInput.Player.Interact.started += ctx => TryPickup();
         playerInput.Player.Interact.canceled += ctx => DropObject();
         playerInput.Player.Zoom.performed += ctx => AdjustHoldDistance(ctx.ReadValue<float>());
-
     }
 
     private void OnEnable() => playerInput.Enable();
@@ -101,13 +115,13 @@ public class PlayerController : MonoBehaviour
         Move();
         Look();
         UpdateCamera();
+        UpdateZoom();
 
         if (isHolding && heldObject != null)
         {
             Vector3 targetPos = new Vector3(0, 0, holdDistance);
             Vector3 worldTarget = holdPoint.TransformPoint(targetPos);
-
-            // Raycast to check if the object is too close to any colliders
+            
             if (Physics.Raycast(playerCamera.position, worldTarget - playerCamera.position, out RaycastHit hit, holdDistance, ~0))
             {
                 float safeDistance = hit.distance - 0.1f;
@@ -120,23 +134,19 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-
     private void Move()
     {
-        //Set speed based on player state.
         currentSpeed = isCrouching ? crouchSpeed : (isSprinting ? sprintSpeed : walkSpeed);
-
         Vector3 move = transform.right * moveInput.x + transform.forward * moveInput.y;
-        controller.Move(move * currentSpeed * Time.deltaTime);
+        controller.Move(move * (currentSpeed * Time.deltaTime));
 
         bool grounded = controller.isGrounded;
         if (grounded && verticalVelocity < 0)
             verticalVelocity = -2f;
 
         verticalVelocity += gravity * Time.deltaTime;
-        controller.Move(Vector3.up * verticalVelocity * Time.deltaTime);
-
-        // Handle landing bob effect.
+        controller.Move(Vector3.up * (verticalVelocity * Time.deltaTime));
+        
         if (grounded && !wasGrounded && !landingTriggered)
         {
             landingBobOffset = landingBobIntensity;
@@ -146,7 +156,6 @@ public class PlayerController : MonoBehaviour
         {
             landingTriggered = false;
         }
-
         wasGrounded = grounded;
     }
 
@@ -163,32 +172,56 @@ public class PlayerController : MonoBehaviour
     {
         if (playerCamera == null)
             return;
-
-        //Apply camera pitch and head bob effects.
-        playerCamera.localRotation = Quaternion.Euler(cameraPitch, 0f, 0f);
-
+        
         float bobOffsetY = 0f;
         if (moveInput.sqrMagnitude > 0.01f && controller.isGrounded)
         {
-            bobTimer += Time.deltaTime * bobSpeed;
-            bobOffsetY = Mathf.Sin(bobTimer) * bobAmount;
+            float multiplier = isSprinting ? sprintBobMultiplier : 1f;
+            bobTimer += Time.deltaTime * bobSpeed * multiplier;
+            bobOffsetY = Mathf.Sin(bobTimer) * bobAmount * multiplier;
         }
         else
         {
             bobTimer = 0f;
         }
-
-        //Smoothly reduce landing bob effect.
+        
+        float breathOffsetY = Mathf.Sin(Time.time * breathingRate * Mathf.PI * 2f) * breathingAmount;
+        
+        float breathRotX = Mathf.Sin(Time.time * breathingRate * Mathf.PI * 2f) * breathingRotationAmountX;
+        float breathRotY = Mathf.Cos(Time.time * breathingRate * Mathf.PI * 2f) * breathingRotationAmountY;
+        
+        Quaternion baseRotation = Quaternion.Euler(cameraPitch, 0f, 0f);
+        Quaternion breathRotation = Quaternion.Euler(breathRotX, breathRotY, 0f);
+        playerCamera.localRotation = baseRotation * breathRotation;
+        
         landingBobOffset = Mathf.Lerp(landingBobOffset, 0f, Time.deltaTime * landingBobDecaySpeed);
-
-        //Adjust camera position based on crouching state and bob effects.
         Vector3 targetPos = defaultCameraLocalPos;
         if (isCrouching)
             targetPos.y -= crouchCameraOffset;
-
-        targetPos.y += bobOffsetY + landingBobOffset;
+        targetPos.y += bobOffsetY + landingBobOffset + breathOffsetY;
         playerCamera.localPosition = Vector3.Lerp(playerCamera.localPosition, targetPos, Time.deltaTime * 10f);
     }
+    
+    private void UpdateZoom()
+    {
+        if (CinemachineBrain == null)
+            return;
+        
+        CinemachineCamera vcam = CinemachineBrain.ActiveVirtualCamera as CinemachineCamera;
+        if (vcam == null)
+            return;
+
+        if (Mouse.current.rightButton.isPressed)
+        {
+            vcam.Lens.FieldOfView = Mathf.Lerp(vcam.Lens.FieldOfView, zoomedFOV, zoomTransitionSpeed * Time.deltaTime);
+        }
+        else
+        {
+            vcam.Lens.FieldOfView = Mathf.Lerp(vcam.Lens.FieldOfView, defaultFOV, zoomTransitionSpeed * Time.deltaTime);
+        }
+    }
+
+
 
     private void Jump()
     {
@@ -203,7 +236,6 @@ public class PlayerController : MonoBehaviour
     {
         if (isCrouching)
         {
-            //Stand up if there's enough room.
             if (CanStand())
             {
                 isCrouching = false;
@@ -226,7 +258,7 @@ public class PlayerController : MonoBehaviour
         return !Physics.CheckCapsule(bottom, top, controller.radius);
     }
 
-    // Object Interaction - Ale
+
     private void TryPickup()
     {
         if (isHolding) return;
@@ -236,7 +268,6 @@ public class PlayerController : MonoBehaviour
         {
             if (hit.collider.CompareTag("Basket"))
             {
-                // Search for a object inside the basket
                 Transform basket = hit.collider.transform;
                 foreach (Transform child in basket)
                 {
@@ -249,13 +280,12 @@ public class PlayerController : MonoBehaviour
                         heldObject.transform.SetParent(holdPoint);
                         heldObject.transform.localPosition = holdPoint.InverseTransformDirection(holdPoint.forward * holdDistance);
                         isHolding = true;
-                        break; // Take the first object found
+                        break;
                     }
                 }
             }
             else if (hit.collider.CompareTag("PickUp"))
             {
-                // Option to pick up the object directly
                 heldObject = hit.collider.gameObject;
                 Rigidbody rb = heldObject.GetComponent<Rigidbody>();
                 if (rb != null) rb.isKinematic = true;
@@ -278,18 +308,14 @@ public class PlayerController : MonoBehaviour
             rb.isKinematic = false;
             rb.linearVelocity = controller.velocity;
         }
-
         heldObject = null;
         isHolding = false;
     }
 
-
     private void AdjustHoldDistance(float scroll)
     {
         if (!isHolding) return;
-
         holdDistance = Mathf.Clamp(holdDistance + scroll * zoomSpeed, 0.5f, 5f);
         heldObject.transform.localPosition = new Vector3(0, 0, holdDistance);
     }
-
 }

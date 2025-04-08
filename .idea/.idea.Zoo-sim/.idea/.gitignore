@@ -2,9 +2,11 @@
 /shelf/
 /workspace.xml
 # Rider ignored files
+
 /projectSettingsUpdater.xml
 /modules.xml
 /contentModel.xml
+
 /.idea.Zoo-sim.iml
 # Editor-based HTTP Client requests
 /httpRequests/
