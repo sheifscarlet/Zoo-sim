@@ -47,6 +47,17 @@ public class PlayerController : MonoBehaviour
     private PlayerInputActions.PlayerInputActions playerInput;
     private bool wasGrounded = true;
 
+    // Object Interaction Settings - Ale
+    [Header("Object Interaction")]
+    public Transform holdPoint;
+    public float pickupRange = 3f;
+    public LayerMask interactableLayer;
+    private GameObject heldObject;
+    private bool isHolding;
+
+    private float holdDistance = 2f;
+    public float zoomSpeed = 2f;
+
     private void Awake()
     {
         controller ??= GetComponent<CharacterController>();
@@ -74,6 +85,12 @@ public class PlayerController : MonoBehaviour
         playerInput.Player.Sprint.canceled += ctx => StopSprint();
 
         playerInput.Player.Crouch.performed += ctx => ToggleCrouch();
+
+        // Object Interaction - Ale
+        playerInput.Player.Interact.started += ctx => TryPickup();
+        playerInput.Player.Interact.canceled += ctx => DropObject();
+        playerInput.Player.Zoom.performed += ctx => AdjustHoldDistance(ctx.ReadValue<float>());
+
     }
 
     private void OnEnable() => playerInput.Enable();
@@ -84,7 +101,25 @@ public class PlayerController : MonoBehaviour
         Move();
         Look();
         UpdateCamera();
+
+        if (isHolding && heldObject != null)
+        {
+            Vector3 targetPos = new Vector3(0, 0, holdDistance);
+            Vector3 worldTarget = holdPoint.TransformPoint(targetPos);
+
+            // Raycast to check if the object is too close to any colliders
+            if (Physics.Raycast(playerCamera.position, worldTarget - playerCamera.position, out RaycastHit hit, holdDistance, ~0))
+            {
+                float safeDistance = hit.distance - 0.1f;
+                heldObject.transform.localPosition = new Vector3(0, 0, Mathf.Clamp(safeDistance, 0.5f, holdDistance));
+            }
+            else
+            {
+                heldObject.transform.localPosition = targetPos;
+            }
+        }
     }
+
 
     private void Move()
     {
@@ -190,4 +225,71 @@ public class PlayerController : MonoBehaviour
         Vector3 top = transform.position + Vector3.up * (defaultControllerHeight - controller.radius);
         return !Physics.CheckCapsule(bottom, top, controller.radius);
     }
+
+    // Object Interaction - Ale
+    private void TryPickup()
+    {
+        if (isHolding) return;
+
+        Ray ray = new Ray(playerCamera.position, playerCamera.forward);
+        if (Physics.Raycast(ray, out RaycastHit hit, pickupRange, interactableLayer))
+        {
+            if (hit.collider.CompareTag("Basket"))
+            {
+                // Search for a object inside the basket
+                Transform basket = hit.collider.transform;
+                foreach (Transform child in basket)
+                {
+                    if (child.CompareTag("PickUp"))
+                    {
+                        heldObject = child.gameObject;
+                        Rigidbody rb = heldObject.GetComponent<Rigidbody>();
+                        if (rb != null) rb.isKinematic = true;
+
+                        heldObject.transform.SetParent(holdPoint);
+                        heldObject.transform.localPosition = holdPoint.InverseTransformDirection(holdPoint.forward * holdDistance);
+                        isHolding = true;
+                        break; // Take the first object found
+                    }
+                }
+            }
+            else if (hit.collider.CompareTag("PickUp"))
+            {
+                // Option to pick up the object directly
+                heldObject = hit.collider.gameObject;
+                Rigidbody rb = heldObject.GetComponent<Rigidbody>();
+                if (rb != null) rb.isKinematic = true;
+
+                heldObject.transform.SetParent(holdPoint);
+                heldObject.transform.localPosition = Vector3.forward * holdDistance;
+                isHolding = true;
+            }
+        }
+    }
+
+    private void DropObject()
+    {
+        if (!isHolding) return;
+
+        heldObject.transform.SetParent(null);
+        Rigidbody rb = heldObject.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.isKinematic = false;
+            rb.linearVelocity = controller.velocity;
+        }
+
+        heldObject = null;
+        isHolding = false;
+    }
+
+
+    private void AdjustHoldDistance(float scroll)
+    {
+        if (!isHolding) return;
+
+        holdDistance = Mathf.Clamp(holdDistance + scroll * zoomSpeed, 0.5f, 5f);
+        heldObject.transform.localPosition = new Vector3(0, 0, holdDistance);
+    }
+
 }
