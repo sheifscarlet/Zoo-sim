@@ -184,7 +184,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5741875878152988260}
   - component: {fileID: 717517207050899733}
-  - component: {fileID: 8081222789893682175}
   m_Layer: 0
   m_Name: BigTree
   m_TagString: Untagged
@@ -242,28 +241,6 @@ LODGroup:
     renderers:
     - renderer: {fileID: 5214077335718225157}
   m_Enabled: 1
---- !u!64 &8081222789893682175
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4964353397659614430}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 5
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -5442819404133529457, guid: 0bbab9d81570dfd40ac0c1ceb830461f, type: 3}
 --- !u!1 &7147933951010029524
 GameObject:
   m_ObjectHideFlags: 0
