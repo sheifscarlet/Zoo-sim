@@ -8219,6 +8219,69 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000012378391202, guid: ecc15abaa2d4963428bdf7fc9eb09410, type: 3}
   m_PrefabInstance: {fileID: 785357388}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &788979267
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1776744802}
+    m_Modifications:
+    - target: {fileID: 3202938974220864535, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_Name
+      value: TigerPanel
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.4857788
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 7.4917655
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -10.716415
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1587486745937841498, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+    - targetCorrespondingSourceObject: {fileID: 5533520935192554407, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 0}
+  m_SourcePrefab: {fileID: 100100000, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
 --- !u!1 &792757493
 GameObject:
   m_ObjectHideFlags: 0
@@ -10070,6 +10133,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000012378391202, guid: ecc15abaa2d4963428bdf7fc9eb09410, type: 3}
   m_PrefabInstance: {fileID: 1015128540}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1042470002 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4590765203844753117, guid: 87d7ec8ccbada38498b78b49b04446cb, type: 3}
+  m_PrefabInstance: {fileID: 242264211}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1044175306
 GameObject:
@@ -13867,25 +13935,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 238466790}
     m_Modifications:
-    - target: {fileID: 143615212247586847, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
-      propertyPath: m_text
-      value: "Chickens are domesticated birds known for their versatility and widespread
-        presence around the world. They are believed to have been domesticated from
-        the red junglefowl in Southeast Asia and are now found in various environments,
-        from farms to backyards. Chickens are social animals, living in flocks with
-        a distinct pecking order.\r\n\r\nFun Facts:\r\n\r\n    Breeds: There are
-        hundreds of chicken breeds worldwide, each with unique characteristics. They
-        range from the small Serama to the large Jersey Giant.\r\n    Diet: Chickens
-        are omnivores, feeding on a diet of grains, seeds, insects, and even small
-        animals. They spend much of their day foraging and scratching the ground
-        for food.\r\n    Eggs: Hens lay eggs year-round, with some breeds capable
-        of producing over 200 eggs per year. The color of the eggshell can vary by
-        breed, ranging from white to brown to even blue or green.\r\n    Communication:
-        Chickens use a variety of vocalizations and body language to communicate.
-        They have over 30 distinct calls, each with a specific meaning.\r\n    Lifespan:
-        The average lifespan of a chicken is around 5 to 10 years, although this
-        can vary depending on the breed and living conditions.\r\n"
-      objectReference: {fileID: 0}
     - target: {fileID: 3202938974220864535, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
       propertyPath: m_Name
       value: 'ChickenPanel '
@@ -13933,12 +13982,6 @@ PrefabInstance:
     - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4271057370060303828, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
-      propertyPath: m_text
-      value: 'Chicken
-
-'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -15348,6 +15391,7 @@ Transform:
   - {fileID: 1263379947}
   - {fileID: 1907612062}
   - {fileID: 129280389}
+  - {fileID: 717501364}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1455112532
@@ -15946,26 +15990,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 957086384}
     m_Modifications:
-    - target: {fileID: 143615212247586847, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
-      propertyPath: m_text
-      value: "Bears are large, powerful mammals known for their strength and adaptability.
-        They are found in various habitats across North America, South America, Europe,
-        and Asia, including forests, mountains, tundras, and grasslands. Bears are
-        typically solitary animals, except during mating season or when a mother
-        is with her cubs.\r\n\r\nFun Facts:\r\n\r\n    Species: There are eight species
-        of bears worldwide, including the American black bear, brown bear (which
-        includes grizzlies), polar bear, and giant panda.\r\n    Size and Strength:
-        Bears range in size from the small sun bear, weighing around 27 kg (60 pounds),
-        to the massive polar bear, which can weigh up to 800 kg (1,760 pounds). They
-        are known for their incredible strength and powerful jaws.\r\n    Diet: Most
-        bears are omnivores, feeding on a varied diet of plants, fruits, nuts, insects,
-        fish, and small animals. Some species, like the polar bear, are primarily
-        carnivorous.\r\n    Hibernation: Many bear species hibernate during the winter
-        months, slowing their metabolism to conserve energy when food is scarce.
-        They can go without eating, drinking, or passing waste for over 100 days.\r\n   
-        Lifespan: The lifespan of a bear varies by species but generally ranges from
-        20 to 30 years in the wild, with some living longer in captivity.\r\n"
-      objectReference: {fileID: 0}
     - target: {fileID: 3202938974220864535, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
       propertyPath: m_Name
       value: BearPanel
@@ -16013,10 +16037,6 @@ PrefabInstance:
     - target: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4271057370060303828, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
-      propertyPath: m_text
-      value: Grizzly Bear
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -18787,6 +18807,7 @@ Transform:
   - {fileID: 1334098346}
   - {fileID: 2093451860}
   - {fileID: 1259389583}
+  - {fileID: 396053155}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &1741421512
@@ -19170,6 +19191,7 @@ Transform:
   - {fileID: 2031928832}
   - {fileID: 889807594}
   - {fileID: 2051345603}
+  - {fileID: 1855378916}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1779074507
@@ -19974,6 +19996,11 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 408904, guid: 4cc487e002327cb43995ca1871bd142e, type: 3}
   m_PrefabInstance: {fileID: 1850364376}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &1855378916 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3761076420431864189, guid: 818a1169405c0b148b2a57827e900c5d, type: 3}
+  m_PrefabInstance: {fileID: 788979267}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1869602718
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20490,6 +20517,7 @@ Transform:
   - {fileID: 278417803}
   - {fileID: 1157182360}
   - {fileID: 1478578034}
+  - {fileID: 258585491}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1951204080
@@ -22051,6 +22079,7 @@ Transform:
   - {fileID: 635706622}
   - {fileID: 1166845364}
   - {fileID: 1790951516}
+  - {fileID: 1500922607}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1001 &2114091090
@@ -22505,42 +22534,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 3025194364081236923, guid: 76af3c3452f5dc847b735667df796205, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.151
-      objectReference: {fileID: 0}
-    - target: {fileID: 3025194364081236923, guid: 76af3c3452f5dc847b735667df796205, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.68942666
-      objectReference: {fileID: 0}
-    - target: {fileID: 3025194364081236923, guid: 76af3c3452f5dc847b735667df796205, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.1930882
-      objectReference: {fileID: 0}
-    - target: {fileID: 3025194364081236923, guid: 76af3c3452f5dc847b735667df796205, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.671806
-      objectReference: {fileID: 0}
-    - target: {fileID: 3025194364081236923, guid: 76af3c3452f5dc847b735667df796205, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.18995938
-      objectReference: {fileID: 0}
-    - target: {fileID: 3025194364081236923, guid: 76af3c3452f5dc847b735667df796205, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 2.687
-      objectReference: {fileID: 0}
-    - target: {fileID: 3025194364081236923, guid: 76af3c3452f5dc847b735667df796205, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 31.431
-      objectReference: {fileID: 0}
-    - target: {fileID: 3025194364081236923, guid: 76af3c3452f5dc847b735667df796205, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 448.47
-      objectReference: {fileID: 0}
-    - target: {fileID: 3025194364081236923, guid: 76af3c3452f5dc847b735667df796205, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -0.167
-      objectReference: {fileID: 0}
     - target: {fileID: 5419037091551488817, guid: 76af3c3452f5dc847b735667df796205, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -22584,34 +22577,6 @@ PrefabInstance:
     - target: {fileID: 5593647248730257359, guid: 76af3c3452f5dc847b735667df796205, type: 3}
       propertyPath: m_Name
       value: GroupedPanelsV1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8242841916267844165, guid: 76af3c3452f5dc847b735667df796205, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.495
-      objectReference: {fileID: 0}
-    - target: {fileID: 8242841916267844165, guid: 76af3c3452f5dc847b735667df796205, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.37964
-      objectReference: {fileID: 0}
-    - target: {fileID: 8242841916267844165, guid: 76af3c3452f5dc847b735667df796205, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.067789085
-      objectReference: {fileID: 0}
-    - target: {fileID: 8242841916267844165, guid: 76af3c3452f5dc847b735667df796205, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.88713497
-      objectReference: {fileID: 0}
-    - target: {fileID: 8242841916267844165, guid: 76af3c3452f5dc847b735667df796205, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.2535146
-      objectReference: {fileID: 0}
-    - target: {fileID: 8242841916267844165, guid: 76af3c3452f5dc847b735667df796205, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: -21.015
-      objectReference: {fileID: 0}
-    - target: {fileID: 8242841916267844165, guid: 76af3c3452f5dc847b735667df796205, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 492.377
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -22791,4 +22756,3 @@ SceneRoots:
   - {fileID: 1459891749943021888}
   - {fileID: 1677402229}
   - {fileID: 131791342}
-
